@@ -13,20 +13,5 @@ namespace TechJobsPersistent.ViewModels
         [Required(ErrorMessage = "Location is required")]
         public string Location { get; set; }
 
-        // Employer has constructor (string name, string location)
-        // Can I do?
-        //public AddEmployerViewModel(Employer theEmployer)
-        //{
-            
-        //}
-        //     OR....
-        //public AddEmployerViewModel(string Name, string Location)
-        //{
-        //    Name = name;
-        //    Location = location;
-        //}
-
-
-
     }
 }
