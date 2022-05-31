@@ -14,8 +14,9 @@ namespace TechJobsPersistent.ViewModels
         [Required(ErrorMessage = "EmployerId is required")]
         public int EmployerId { get; set; }
         public List<SelectListItem> Employers { get; set; }
+        public List<Skill> Skills { get; set; }
 
-        public AddJobViewModel(List<Employer> registeredEmployers)
+        public AddJobViewModel(List<Employer> registeredEmployers, List<Skill> selectedSkills)
         {
             Employers = new List<SelectListItem>();
 
@@ -27,6 +28,8 @@ namespace TechJobsPersistent.ViewModels
                     Text = employer.Name
                 });
             }
+
+            Skills = selectedSkills;
         }
 
         public AddJobViewModel() { }
