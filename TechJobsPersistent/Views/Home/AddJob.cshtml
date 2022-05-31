@@ -21,8 +21,8 @@
         {
             <label for="selectedSkills">@skill.Name</label>
             <input type="checkbox" name="selectedSkills" value="@skill.Id" />
-            <a asp-controller="Skill" asp-action="Add" asp-route-column="all">All</a>
         }
+            <a asp-controller="Skill" asp-action="Add">Add new skill</a>
     </div>
     <input type="submit" value="Add Job" />
 </form>
