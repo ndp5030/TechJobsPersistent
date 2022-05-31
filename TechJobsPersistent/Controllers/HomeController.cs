@@ -53,15 +53,17 @@ namespace TechJobsPersistent.Controllers
                 {
                     JobSkill newJobSkill = new JobSkill
                     {
-                        SkillId = Int32.Parse(skillId),
-                        JobId = newjob.Id
+                        JobId = newjob.Id,
+                        Job = newjob,
+                        SkillId = Int32.Parse(skillId)
                     };
-                context.JobSkills.Add(newJobSkill);
+
+                    context.JobSkills.Add(newJobSkill);
                 }
                 context.Jobs.Add(newjob);
 
                 context.SaveChanges();
-                return Redirect("/Home");
+                return Redirect("Index");
             }
             return View("AddJob", addJobViewModel);
 
